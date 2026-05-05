@@ -1,6 +1,8 @@
 # LLM Calculator Tool (dotnet version)
 
-This tiny project gives you a tool that is designed for use with LLMs, to help reduce the risk of hallucinating inaccurate answers when arithmetic is involved.
+This tiny project gives you a tool that is designed for use with LLMs, to help reduce the risk of hallucinating inaccurate answers when numbers and arithmetic are required.
+
+You can easily plug this calculator into the OpenAI dotnet library as a function tool, or wrap it inside a function with Semantic Kernel.
 
 The calculator works by taking an expression (sum) as a string, which of course would be provided by the LLM as a parameter to a 'Tool Call' if the LLM decides that it needs the help of a calculator. The string is parsed, first into tokens and then into a simple AST, and it implements the 'Evaluate' pattern to calculate the result, which is also returned as a string (ready for directly adding to the chat history as a tool result).
 
