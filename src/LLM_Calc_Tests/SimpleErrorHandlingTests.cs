@@ -8,7 +8,7 @@ public class SimpleErrorHandlingTests
     [TestMethod]
     public void SimpleErrorHandlingTest()
     {
-        var err = Assert.ThrowsException<ParserError>(() =>
+        var err = Assert.Throws<ParserError>(() =>
         {
             var result = LlmCalculator.Calculate("2+", true);
         });
@@ -27,7 +27,7 @@ public class SimpleErrorHandlingTests
     [TestMethod]
     public void SimpleErrorHandlingTest2()
     {
-        var err = Assert.ThrowsException<ScannerError>(() =>
+        var err = Assert.Throws<ScannerError>(() =>
         {
             var result = LlmCalculator.Calculate(" [1]", true);
         });
@@ -38,7 +38,7 @@ public class SimpleErrorHandlingTests
     [TestMethod]
     public void SimpleErrorHandlingTest3()
     {
-        var err = Assert.ThrowsException<ScannerError>(() =>
+        var err = Assert.Throws<ScannerError>(() =>
         {
             var result = LlmCalculator.Calculate(@"2
 +
@@ -51,7 +51,7 @@ public class SimpleErrorHandlingTests
     [TestMethod]
     public void SimpleErrorHandling_NotImplementedYet()
     {
-        var err = Assert.ThrowsException<ParserError>(() =>
+        var err = Assert.Throws<ParserError>(() =>
         {
             var result = LlmCalculator.Calculate("test 2", true);
         });

@@ -57,6 +57,9 @@ public class Scanner
             case '+':
                 AddToken(TokenType.PLUS);
                 break;
+            case '^':
+                AddToken(TokenType.POW);
+                break;
             case '*':
                 if (MatchNext('*'))
                 {
