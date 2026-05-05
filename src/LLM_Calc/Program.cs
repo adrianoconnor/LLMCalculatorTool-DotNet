@@ -19,7 +19,7 @@ public static class Program
 
 		builder.Services
 		    .AddMcpServer()
-		    .WithStdioServerTransport()
+		    .WithStdioServerTransport()	    
 		    .WithToolsFromAssembly();
 
 		await builder.Build().RunAsync();

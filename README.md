@@ -16,6 +16,8 @@ result = LlmCalculator.Calculate("4 + 3 * 2");
 
 This returns the plain result as a string, e.g., "10" in this example.
 
+Note: The scanner that tokenizes the expression treats commas in numbers as meaningless, as per English/American use in making numbers readable. If you're working in a language that uses comma as a period separator, it will not work. Please do feel free to reach out to me and we can try and come up with a way to make it work.
+
 Running the project starts the MCP server on stdio. Use the following MCP configuration as an example of how to directly launch a dotnet MCP server (you do need dotnet sdk to be installed of course):
 
 ```json
